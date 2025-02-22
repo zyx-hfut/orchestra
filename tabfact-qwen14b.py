@@ -44,7 +44,7 @@ with open('dataset/TabFact/few-shot-demo/coding-agent-prompt.txt') as file:
     coder_pt = file.read()
 
 few_shot_pt_bank = {
-    "reasoner_pt": reasoner_pt,  # reasoner_pt, reasoner_pt_cot, reasoner_pt_simple
+    "reasoner_pt": reasoner_pt,
     "coder_pt": coder_pt
 }
 
