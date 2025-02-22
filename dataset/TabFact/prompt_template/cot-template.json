@@ -1,0 +1,3 @@
+{
+    "cot_prompt_template": "The database table DF is shown as follows:\n{}\n\nJudge whether the following statement is correct or not based on the table above: \"{}\". Let's think step-by-step to answer the question correctly."
+}

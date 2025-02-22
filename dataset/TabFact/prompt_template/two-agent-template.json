@@ -1,0 +1,10 @@
+{
+    "prompt_template_coding": "The database table DF is shown as follows:\n{}\n\nInstruction:\n{}",
+    "prompt_template_reasoning": "The table is shown as follows:\n{}\n\nJudge whether the following statement is correct or not based on thea data above: \"{}\".",
+    "intermediate_prompt_template": {
+        "SQL": "Intermediate table:\n{}",
+        "Python": "Intermediate table:\n{}",
+        "Reasoner": "Intermediate table:\n{}",
+        "Coder": "Intermediate table:\n{}\n\nInstruction:\n{}"
+    }
+}

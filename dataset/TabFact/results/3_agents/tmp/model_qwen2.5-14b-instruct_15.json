@@ -1,0 +1,212 @@
+[
+    {
+        "id": "qid-1",
+        "utterance": "the sweet dream episode happen later in the series than the witchfinder. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "yes",
+        "predicted_value": "yes",
+        "all_predictions": [
+            "yes",
+            "yes",
+            "no",
+            "yes",
+            "yes"
+        ]
+    },
+    {
+        "id": "qid-2",
+        "utterance": "david moore direct 3 episode of series 2 of [UNK]. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "yes",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-3",
+        "utterance": "the lady of the lake episode have the most uk viewer. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "yes",
+        "predicted_value": "yes",
+        "all_predictions": [
+            "yes",
+            "yes",
+            "yes",
+            "yes",
+            "yes"
+        ]
+    },
+    {
+        "id": "qid-4",
+        "utterance": "lucy watkins only write 1 episode of series 2. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "yes",
+        "predicted_value": "yes",
+        "all_predictions": [
+            "yes",
+            "yes",
+            "yes",
+            "yes",
+            "yes"
+        ]
+    },
+    {
+        "id": "qid-5",
+        "utterance": "beauty and the beast (part 2) have more uk viewer than beauty and the beast (part 1). yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "yes",
+        "predicted_value": "yes",
+        "all_predictions": [
+            "yes",
+            "yes",
+            "yes",
+            "yes",
+            "yes"
+        ]
+    },
+    {
+        "id": "qid-6",
+        "utterance": "the sweet dream episode happen earlier in the series than the witchfinder. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-7",
+        "utterance": "david moore direct 5 episode of series 2 of [UNK]. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-8",
+        "utterance": "the lady of the lake episode have the least uk viewer. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-9",
+        "utterance": "lucy watkins only write 6 episode of series 2. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-10",
+        "utterance": "beauty and the beast (part 2) have less uk viewer than beauty and the beast (part 1). yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-11",
+        "utterance": "4 player score 3 goal total , and all 4 be in league 4. yes or no?",
+        "source_csv": "data/all_csv/2-17200019-10.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-12",
+        "utterance": "jonathan legear score 4 more goal than mat\u00edas su\u00e1rez , the next highest rank player in the belgian first dvision a league who play in the belgian cup. yes or no?",
+        "source_csv": "data/all_csv/2-17200019-10.html.csv",
+        "target_value": "yes",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "yes",
+            "yes",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-13",
+        "utterance": "of the 4 player who play in the belgian cup , jonathan legear score more goal than the other player combine. yes or no?",
+        "source_csv": "data/all_csv/2-17200019-10.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-14",
+        "utterance": "guillaume gillet score 3 time as much as each of the other 2 player in the uefa champion league tournament. yes or no?",
+        "source_csv": "data/all_csv/2-17200019-10.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-15",
+        "utterance": "though 4 player from belgian first division a be in the top 19 scorer , the top scorer (matias suarez) have 8 fewer goal than mbark boussoufa , who have 11 goal. yes or no?",
+        "source_csv": "data/all_csv/2-17200019-10.html.csv",
+        "target_value": "yes",
+        "predicted_value": "yes",
+        "all_predictions": [
+            "yes",
+            "no",
+            "no",
+            "yes",
+            "yes"
+        ]
+    }
+]

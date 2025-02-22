@@ -1,0 +1,152 @@
+The database table DF is shown as follows:
+[HEAD]: year|venue|winner|country|score
+---
+[ROW] 1: 2005|arlandastad|david patrick|scotland|272
+[ROW] 2: 2004|arlandastad|matthew king|england|270
+[ROW] 3: 2003|falsterbo|titch moore|south africa|273
+[ROW] 4: 2002|halmstad|thomas besancenez|france|279
+[ROW] 5: 2001|bokskogens|cristophe pottier|france|272
+
+Judge whether the following statement is correct or not based on the data above: "in 2004 the score be less than 270. yes or no?". Generate SQL or Python code step-by-step given the question and table to answer the question correctly. For each step, generate SQL code to process the query or Python code to reformat the data. Output the code braced by "```" and an external executor will process the code generated and feed an intermediate table back to you. Answer the question directly (yes or no) if confident.
+
+SQL: ```SELECT score FROM DF WHERE year=2004;```.
+
+Intermediate table:
+[HEAD]: score
+---
+[ROW] 1: 270
+
+Answer: ```no```.
+
+The database table DF is shown as follows:
+[HEAD]: date|opponent|venue|result|attendance
+---
+[ROW] 1: 12 august 2001|burnley|h|0 - 2|21766
+[ROW] 2: 18 august 2001|crewe alexandra|a|2 - 0|7933
+[ROW] 3: 25 august 2001|west bromwich albion|h|1 - 1|18844
+[ROW] 4: 27 august 2001|norwich city|a|0 - 2|16820
+[ROW] 5: 8 september 2001|birmingham city|a|0 - 2|19421
+[ROW] 6: 15 september 2001|wimbledon|a|1 - 1|7348
+[ROW] 7: 17 september 2001|bradford city|h|1 - 1|18012
+[ROW] 8: 22 september 2001|manchester city|h|2 - 6|25731
+...
+[ROW] 45: 13 april 2002|stockport county|a|1 - 3|8706
+[ROW] 46: 21 april 2002|wolverhampton wanderers|h|2 - 2|29772
+
+Judge whether the following statement is correct or not based on the data above: "sheffield wednesday fc play the wolverhampton wanderers 2 time during the 2001 - 02 season , and both match result in tie score. yes or no?". Generate SQL or Python code step-by-step given the question and table to answer the question correctly. For each step, generate SQL code to process the query or Python code to reformat the data. Output the code braced by "```" and an external executor will process the code generated and feed an intermediate table back to you. Answer the question directly (yes or no) if confident.
+
+Python: ```
+def get_score_diff(s):
+    return int(s.split(' - ')[0]) - int(s.split(' - ')[1])
+DF['score_diff'] = DF.apply(lambda x: get_score_diff(x['result']), axis=1)```.
+
+Intermediate table:
+[HEAD]: date|opponent|venue|result|attendance|score_diff
+---
+[ROW] 1: 12 august 2001|burnley|h|0 - 2|21766|-2
+[ROW] 2: 18 august 2001|crewe alexandra|a|2 - 0|7933|2
+[ROW] 3: 25 august 2001|west bromwich albion|h|1 - 1|18844|0
+[ROW] 4: 27 august 2001|norwich city|a|0 - 2|16820|-2
+[ROW] 5: 8 september 2001|birmingham city|a|0 - 2|19421|-2
+[ROW] 6: 15 september 2001|wimbledon|a|1 - 1|7348|0
+[ROW] 7: 17 september 2001|bradford city|h|1 - 1|18012|0
+[ROW] 8: 22 september 2001|manchester city|h|2 - 6|25731|-4
+...
+[ROW] 45: 13 april 2002|stockport county|a|1 - 3|8706|-2
+[ROW] 46: 21 april 2002|wolverhampton wanderers|h|2 - 2|29772|0
+
+SQL: ```SELECT * FROM DF WHERE opponent LIKE "%wolverhampton wanderers%" AND score_diff=0;```.
+
+[HEAD]: date|opponent|venue|result|attendance|score_diff
+---
+[ROW] 1: 18 november 2001|wolverhampton wanderers|a|0 - 0|19947|0
+[ROW] 2: 21 april 2002|wolverhampton wanderers|h|2 - 2|29772|0
+
+SQL: ```SELECT COUNT(*) FROM DF;```.
+
+Intermediate table:
+[HEAD]: count(*)
+---
+[ROW] 1: 2
+
+Answer: ```yes```.
+
+The database table DF is shown as follows:
+[HEAD]: nat|name|moving_from|type|transfer_window|transfer_fee
+---
+[ROW] 1: esp|mikel arteta|barcelona|transfer|summer|5.8 m
+[ROW] 2: aus|kevin muscat|wolverhampton wanderers|transfer|summer|free
+[ROW] 3: sco|steven thompson|dundee united|transfer|winter|0.2 m
+[ROW] 4: fra|jerome bonnissel|bordeaux|transfer|winter|free
+[ROW] 5: nor|dan eggen|deportivo alavés|transfer|winter|free
+
+Judge whether the following statement is correct or not based on the data above: "there be 3 total transfer in the winter. yes or no?". Generate SQL or Python code step-by-step given the question and table to answer the question correctly. For each step, generate SQL code to process the query or Python code to reformat the data. Output the code braced by "```" and an external executor will process the code generated and feed an intermediate table back to you. Answer the question directly (yes or no) if confident.
+
+SQL: ```SELECT * FROM DF WHERE transfer_window="winter";```.
+
+Intermediate table:
+[HEAD]: nat|name|moving_from|type|transfer_window|transfer_fee
+---
+[ROW] 1: sco|steven thompson|dundee united|transfer|winter|0.2 m
+[ROW] 2: fra|jerome bonnissel|bordeaux|transfer|winter|free
+[ROW] 3: nor|dan eggen|deportivo alavés|transfer|winter|free
+
+SQL: ```SELECT COUNT(*) FROM DF;```.
+
+Intermediate table:
+[HEAD]: COUNT(*)
+---
+[ROW] 1: 3
+
+Answer: ```yes```.
+
+The database table DF is shown as follows:
+[HEAD]: opposing_team|against|date|venue|round
+---
+[ROW] 1: gillingham|1|1991 - aug - 20|fratton park|1st round 1st leg
+[ROW] 2: gillingham|3|1991 - aug - 27|priestfield stadium|1st round 2nd leg
+[ROW] 3: oxford united|0|1991 - sep - 24|fratton park|2nd round 1st leg
+[ROW] 4: oxford united|0|1991 - oct - 09|manor ground|2nd round 2nd leg
+[ROW] 5: manchester united|3|1991 - oct - 30|old trafford|3rd round
+
+Judge whether the following statement is correct or not based on the data above: "there be 1 game play oppose to gillingham in august. yes or no?". Generate SQL or Python code step-by-step given the question and table to answer the question correctly. For each step, generate SQL code to process the query or Python code to reformat the data. Output the code braced by "```" and an external executor will process the code generated and feed an intermediate table back to you. Answer the question directly (yes or no) if confident.
+
+SQL: ```SELECT * FROM DF where date LIKE "%- aug -%" AND opposing_team="gillingham";```.
+
+Intermediate table:
+[HEAD]: opposing_team|against|date|venue|round
+---
+[ROW] 1: gillingham|1|1991 - aug - 20|fratton park|1st round 1st leg
+[ROW] 2: gillingham|3|1991 - aug - 27|priestfield stadium|1st round 2nd leg
+
+SQL: ```SELECT COUNT(*) FROM DF;```.
+
+Intermediate table:
+[HEAD]: COUNT(*)
+---
+[ROW] 1: 2
+
+Answer: ```no```.
+
+The database table DF is shown as follows:
+[HEAD]: species|strain|type|base_pairs|genes
+---
+[ROW] 1: borrelia burgdorferi|b31|spirochaetes|910724|850
+[ROW] 2: borrelia garinii|pbi|spirochaetes|904246|832
+[ROW] 3: leptospira interrogans|56601|spirochaetes|4332241|4358
+[ROW] 4: unspecified|unspecified|spirochaetes|358943|367
+[ROW] 5: leptospira interrogans|fiocruzl1130|spirochaetes|4277185|3394
+[ROW] 6: unspecified|unspecified|spirochaetes|350181|264
+[ROW] 7: treponema denticola|atcc35405|spirochaetes|2843201|2767
+[ROW] 8: treponema pallidum|nichols|spirochaetes|1138011|1031
+
+Judge whether the following statement is correct or not based on the data above: "the base pair be 358943 when strain be unspecified. yes or no?". Generate SQL or Python code step-by-step given the question and table to answer the question correctly. For each step, generate SQL code to process the query or Python code to reformat the data. Output the code braced by "```" and an external executor will process the code generated and feed an intermediate table back to you. Answer the question directly (yes or no) if confident.
+
+SQL: ```SELECT strain FROM DF WHERE base_pairs=358943;```.
+
+Intermediate table:
+[HEAD]: strain
+---
+[ROW] 1: unspecified
+
+Answer: ```yes```.

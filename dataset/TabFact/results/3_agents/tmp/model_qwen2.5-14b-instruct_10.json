@@ -1,0 +1,142 @@
+[
+    {
+        "id": "qid-1",
+        "utterance": "the sweet dream episode happen later in the series than the witchfinder. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "yes",
+        "predicted_value": "yes",
+        "all_predictions": [
+            "yes",
+            "yes",
+            "no",
+            "yes",
+            "yes"
+        ]
+    },
+    {
+        "id": "qid-2",
+        "utterance": "david moore direct 3 episode of series 2 of [UNK]. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "yes",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-3",
+        "utterance": "the lady of the lake episode have the most uk viewer. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "yes",
+        "predicted_value": "yes",
+        "all_predictions": [
+            "yes",
+            "yes",
+            "yes",
+            "yes",
+            "yes"
+        ]
+    },
+    {
+        "id": "qid-4",
+        "utterance": "lucy watkins only write 1 episode of series 2. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "yes",
+        "predicted_value": "yes",
+        "all_predictions": [
+            "yes",
+            "yes",
+            "yes",
+            "yes",
+            "yes"
+        ]
+    },
+    {
+        "id": "qid-5",
+        "utterance": "beauty and the beast (part 2) have more uk viewer than beauty and the beast (part 1). yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "yes",
+        "predicted_value": "yes",
+        "all_predictions": [
+            "yes",
+            "yes",
+            "yes",
+            "yes",
+            "yes"
+        ]
+    },
+    {
+        "id": "qid-6",
+        "utterance": "the sweet dream episode happen earlier in the series than the witchfinder. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-7",
+        "utterance": "david moore direct 5 episode of series 2 of [UNK]. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-8",
+        "utterance": "the lady of the lake episode have the least uk viewer. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-9",
+        "utterance": "lucy watkins only write 6 episode of series 2. yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    },
+    {
+        "id": "qid-10",
+        "utterance": "beauty and the beast (part 2) have less uk viewer than beauty and the beast (part 1). yes or no?",
+        "source_csv": "data/all_csv/1-29063233-1.html.csv",
+        "target_value": "no",
+        "predicted_value": "no",
+        "all_predictions": [
+            "no",
+            "no",
+            "no",
+            "no",
+            "no"
+        ]
+    }
+]

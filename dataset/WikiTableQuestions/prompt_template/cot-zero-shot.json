@@ -1,0 +1,3 @@
+{
+    "cot_prompt_template": "The table is shown as follows:\n{}\n\nAnswer the following question based on the data above: \"{}\". Please think step-by-step given the question and table to answer the question correctly."
+}

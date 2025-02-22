@@ -1,0 +1,127 @@
+Below are some examples:
+
+########
+Input:
+The database table DF is shown as follows:
+[HEAD]: year|venue|winner|country|score
+---
+[ROW] 1: 2005|arlandastad|david patrick|scotland|272
+[ROW] 2: 2004|arlandastad|matthew king|england|270
+[ROW] 3: 2003|falsterbo|titch moore|south africa|273
+[ROW] 4: 2002|halmstad|thomas besancenez|france|279
+[ROW] 5: 2001|bokskogens|cristophe pottier|france|272
+
+Instruction:
+Select the score column where year is 2004.
+
+Output:
+SQL: ```SELECT score FROM DF WHERE year=2004;```.
+
+########
+Input:
+The database table DF is shown as follows:
+[HEAD]: date|opponent|venue|result|attendance
+---
+[ROW] 1: 12 august 2001|burnley|h|0 - 2|21766
+[ROW] 2: 18 august 2001|crewe alexandra|a|2 - 0|7933
+[ROW] 3: 25 august 2001|west bromwich albion|h|1 - 1|18844
+[ROW] 4: 27 august 2001|norwich city|a|0 - 2|16820
+[ROW] 5: 8 september 2001|birmingham city|a|0 - 2|19421
+[ROW] 6: 15 september 2001|wimbledon|a|1 - 1|7348
+[ROW] 7: 17 september 2001|bradford city|h|1 - 1|18012
+[ROW] 8: 22 september 2001|manchester city|h|2 - 6|25731
+...
+[ROW] 45: 13 april 2002|stockport county|a|1 - 3|8706
+[ROW] 46: 21 april 2002|wolverhampton wanderers|h|2 - 2|29772
+
+Instruction:
+Filter rows where opponent is "wolverhampton wanderers".
+
+Output:
+SQL: ```SELECT * FROM DF WHERE opponent LIKE "%wolverhampton wanderers%";```.
+
+Input:
+Intermediate table:
+[HEAD]: date|opponent|venue|result|attendance
+---
+[ROW] 1: 18 november 2001|wolverhampton wanderers|a|0 - 0|19947
+[ROW] 2: 21 april 2002|wolverhampton wanderers|h|2 - 2|29772
+
+Instruction:
+Determine if the results are ties by comparing the scores.
+
+Output:
+Python: ```def is_tie(result):
+    scores = result.split(' - ')
+    return int(scores[0]) == int(scores[1])
+
+DF['is_tie'] = DF['result'].apply(is_tie)```.
+
+########
+Input:
+The database table DF is shown as follows:
+[HEAD]: nat|name|moving_from|type|transfer_window|transfer_fee
+---
+[ROW] 1: esp|mikel arteta|barcelona|transfer|summer|5.8 m
+[ROW] 2: aus|kevin muscat|wolverhampton wanderers|transfer|summer|free
+[ROW] 3: sco|steven thompson|dundee united|transfer|winter|0.2 m
+[ROW] 4: fra|jerome bonnissel|bordeaux|transfer|winter|free
+[ROW] 5: nor|dan eggen|deportivo alavés|transfer|winter|free
+
+Instruction:
+Filter rows where transfer_window equals "winter" and count them.
+
+Output:
+SQL: ```SELECT COUNT(*) FROM DF WHERE transfer_window="winter";```.
+
+########
+Input:
+The database table DF is shown as follows:
+[HEAD]: opposing_team|against|date|venue|round
+---
+[ROW] 1: gillingham|1|1991 - aug - 20|fratton park|1st round 1st leg
+[ROW] 2: gillingham|3|1991 - aug - 27|priestfield stadium|1st round 2nd leg
+[ROW] 3: oxford united|0|1991 - sep - 24|fratton park|2nd round 1st leg
+[ROW] 4: oxford united|0|1991 - oct - 09|manor ground|2nd round 2nd leg
+[ROW] 5: manchester united|3|1991 - oct - 30|old trafford|3rd round
+
+Instruction:
+Select records where opposing_team is "gillingham" and date contains "aug".
+
+Output:
+SQL: ```SELECT * FROM DF where date LIKE "%- aug -%" AND opposing_team="gillingham";```.
+
+Input:
+Intermediate table:
+[HEAD]: opposing_team|against|date|venue|round
+---
+[ROW] 1: gillingham|1|1991 - aug - 20|fratton park|1st round 1st leg
+[ROW] 2: gillingham|3|1991 - aug - 27|priestfield stadium|1st round 2nd leg
+
+Instruction:
+Count the number of rows.
+
+Output:
+SQL: ```SELECT COUNT(*) FROM DF;```.
+
+########
+Input:
+The database table DF is shown as follows:
+[HEAD]: species|strain|type|base_pairs|genes
+---
+[ROW] 1: borrelia burgdorferi|b31|spirochaetes|910724|850
+[ROW] 2: borrelia garinii|pbi|spirochaetes|904246|832
+[ROW] 3: leptospira interrogans|56601|spirochaetes|4332241|4358
+[ROW] 4: unspecified|unspecified|spirochaetes|358943|367
+[ROW] 5: leptospira interrogans|fiocruzl1130|spirochaetes|4277185|3394
+[ROW] 6: unspecified|unspecified|spirochaetes|350181|264
+[ROW] 7: treponema denticola|atcc35405|spirochaetes|2843201|2767
+[ROW] 8: treponema pallidum|nichols|spirochaetes|1138011|1031
+
+Instruction:
+Filter rows where base_pairs equals 358943 and select the strain.
+
+Output:
+SQL: ```SELECT strain FROM DF WHERE base_pairs=358943;```.
+
+########
